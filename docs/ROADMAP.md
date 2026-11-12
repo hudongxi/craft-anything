@@ -315,6 +315,11 @@ only when it's green and a maintainer has fully reviewed it, code as well as wor
       Seen once in six whole-suite runs on Windows 11: `engines_jeb_check` got a stand-in's answer.
       Give the negative probe an address no other test can take
       — claimed: FuryNocturn, branch test/r5.2-jeb-refused-port
+- [x] CI's Rust moved to 1.100, whose Cargo runs a test binary from
+      `target/<profile>/build/<package>/<hash>/out` instead of `target/<profile>/deps`, so
+      `self_cli_path` no longer found the CLI and the two rebuild tests that start it failed on
+      `main` and every pull request. It now finds the CLI from that folder too
+      — claimed: bflatastic, branch bugfix/r5.2-cli-in-new-build-dir
 
 ### R5.3 A builder that can't make progress stops
 Owner: open · Status: todo

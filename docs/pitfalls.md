@@ -126,6 +126,12 @@ with `AiHub::new`, which saves to the real `config.toml` and the system keychain
 added or removed an AI yet, so nothing noticed. Everything a test app can save goes to a temp
 folder (`AiHub::with_stores`), not only the engine's session.
 
+**A test that finds a program by Cargo's folder layout.** The CLI was looked for one folder up
+from the test binary (`target/debug/deps`). CI follows stable Rust, and Rust 1.100's Cargo moved
+test binaries to `target/debug/build/<package>/<hash>/out`, so `main` failed overnight with no
+code change. When CI breaks on a commit that passed, compare the runs' toolchain lines first, and
+don't rely on where Cargo keeps its intermediate files.
+
 **A test that passes only where a program is installed.** A tool's `Requires::Engine` is checked
 before it runs, so a test of its input checks passed on a machine with ilspycmd and failed on one
 without. Point the test session's `engines.tools` path at a stand-in file when the tool refuses
