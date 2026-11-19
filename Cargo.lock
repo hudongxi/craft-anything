@@ -1467,6 +1467,7 @@ version = "0.6.1"
 dependencies = [
  "bzip2-rs",
  "craft-anything-testkit",
+ "craft-dds",
  "craft-dex",
  "craft-elf",
  "craft-evm",
@@ -1635,6 +1636,11 @@ dependencies = [
 name = "craft-codepage"
 version = "0.1.0"
 source = "git+https://github.com/storytold/craft-libs?rev=d118983bf922ac96c68b885dc55da30435adbc7d#d118983bf922ac96c68b885dc55da30435adbc7d"
+
+[[package]]
+name = "craft-dds"
+version = "0.1.0"
+source = "git+https://github.com/storytold/craft-libs?rev=ca2e6448d702a3a3959bdfc572db2a1a4462fb67#ca2e6448d702a3a3959bdfc572db2a1a4462fb67"
 
 [[package]]
 name = "craft-dex"
