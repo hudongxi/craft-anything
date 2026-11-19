@@ -1750,6 +1750,10 @@ Gaps found while using the app for real projects.
       display at 2x (#1639). The app now asks the GPU for its own limit, never less than before
       — claimed: bflatastic, branch bugfix/r2.9-gpu-texture-limit
 - [ ] Check #1639 live on a Mac with a display wider than 8192 px (built and checked by CI only)
+- [ ] A window wider than the GPU's own texture limit still can't be drawn (review of #1641): a
+      size saved before a GPU change, or a very wide desktop on a GPU that stops at 8192 px. Keep
+      the window's size in pixels, a restored one and a resized one too, within the limit of the
+      GPU it is drawn with
 - [x] "Work on my project" on New project, beside "Make my own version" and "Just look inside":
       pick the folder of a project you already have, say what to change, and its files are edited
       in place, with nothing asked; the project takes the folder's name, an empty folder is
@@ -1773,6 +1777,11 @@ Gaps found while using the app for real projects.
       what the project already has. Checked by a parser test on the result line; the exact line
       Claude Code prints wasn't captured from a live run
       — claimed: bflatastic, branch bugfix/claude-session-too-long
+- [ ] Capture the line Claude Code really prints when its conversation is too long, and decide on
+      a typed field of it if there is one, not on its words (review of #2043)
+- [ ] A note the builder's hook took during a turn that ends with a lost or too-long conversation
+      isn't in the new conversation's first message, though the feed shows it as delivered
+      (review of #2043). Hand such a note on with the fresh start, for a missing session as well
 - [x] `build_file_edit` read the whole project file into memory before replacing text; it now
       uses the same 16 MiB cap as a read, refusing a larger file before it is loaded and leaving
       it unchanged. A file at the cap still edits when the result fits the 8 MB write cap. Engine
