@@ -48,7 +48,7 @@ craft-sniff = { git = "https://github.com/storytold/craft-libs", rev = "d118983b
 craft-dex = { git = "https://github.com/storytold/craft-libs", rev = "35afed3956e14fb813f8c27bc82d65c2bce00028" }
 craft-pkcs7 = { git = "https://github.com/storytold/craft-libs", rev = "1acd07f6bc48b04df49aa00e1c3852b159151d63" }
 craft-sqlite = { git = "https://github.com/storytold/craft-libs", rev = "f428c3d36e0faf3924b76956a01334c051543527" }
-craft-dds = { git = "https://github.com/storytold/craft-libs", rev = "ca2e6448d702a3a3959bdfc572db2a1a4462fb67" }
+craft-dds = { git = "https://github.com/storytold/craft-libs", rev = "6e4a22dee31b7c536b7829f48721026374ae3ad9" }
 thiserror = "2"
 serde = { version = "1", features = ["derive", "rc"] }
 serde_json = "1"
