@@ -1640,7 +1640,7 @@ source = "git+https://github.com/storytold/craft-libs?rev=d118983bf922ac96c68b88
 [[package]]
 name = "craft-dds"
 version = "0.1.0"
-source = "git+https://github.com/storytold/craft-libs?rev=6e4a22dee31b7c536b7829f48721026374ae3ad9#6e4a22dee31b7c536b7829f48721026374ae3ad9"
+source = "git+https://github.com/storytold/craft-libs?rev=7b0ea20dea246fefc6e22bf5500e275f3a7f9421#7b0ea20dea246fefc6e22bf5500e275f3a7f9421"
 
 [[package]]
 name = "craft-dex"
